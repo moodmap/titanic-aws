@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>FORMS</h1>
+    <a href="{% url 'result' %}">Click here</a>
+    <p>1,1,28,0,0,14,4583,1,0</p>
+    <form  action="{% url 'result' %}">
+      {% csrf_token %}
+      <input type="text" name="Pclass">
+      <input type="text" name="Sex">
+      <input type="text" name="Age">
+      <input type="text" name="SibSp">
+      <input type="text" name="Parch">
+      <input type="text" name="Fare">
+      <input type="text" name="Embarked">
+      <input type="text" name="Title">
+
+        <input type="submit" value="Click me">
+    </form>
+    <p>{{a}}</p>
+  </body>
+</html>
